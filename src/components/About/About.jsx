@@ -187,7 +187,11 @@ export default function About() {
                 <span className="about__stat-label">Dedicated</span>
               </div>
             </div>
-            <button className="about__cta">View My Work</button>
+            <button className="about__cta" onClick={() => {
+            const el = document.getElementById('projects');
+            if (el) el.scrollIntoView({ behavior: 'smooth' });
+            }}> View My Work
+            </button>
           </div>
         </div>
 
