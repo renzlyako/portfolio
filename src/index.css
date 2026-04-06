@@ -1,0 +1,48 @@
+/* ── GLOBAL RESET & VARIABLES ── */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg:        #05050d;
+  --surface:   #0c0c1a;
+  --border:    rgba(255, 255, 255, 0.06);
+
+  --accent-purple: #7c5cfc;
+  --accent-cyan:   #00d4ff;
+  --accent-pink:   #ff6b9d;
+  --accent-green:  #4ade80;
+  --accent-amber:  #fbbf24;
+  --accent-orange: #f97316;
+
+  --text-primary:   #e8e8f4;
+  --text-secondary: #55556a;
+  --text-muted:     #2a2a3c;
+
+  --font-display: 'Syne', sans-serif;
+  --font-body:    'DM Sans', sans-serif;
+}
+
+html, body, #root {
+  width: 100%;
+  height: 100%;
+  background: var(--bg);
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  font-family: var(--font-body);
+  cursor: pointer;
+  border: none;
+  outline: none;
+}

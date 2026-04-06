@@ -1,0 +1,194 @@
+/* ── HERO SECTION ── */
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ── DEEP GLOW ── */
+.hero__glow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 560px;
+  height: 560px;
+  background: radial-gradient(
+    circle,
+    rgba(124, 92, 252, 0.13) 0%,
+    rgba(0, 212, 255, 0.07) 40%,
+    transparent 70%
+  );
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 1;
+  animation: breathe 7s ease-in-out infinite;
+}
+
+@keyframes breathe {
+  0%, 100% { transform: translate(-50%, -50%) scale(1);    opacity: 1; }
+  50%       { transform: translate(-50%, -50%) scale(1.18); opacity: 0.65; }
+}
+
+/* ── DECORATIVE RINGS ── */
+.hero__ring {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.hero__ring--1 {
+  width: 240px;
+  height: 240px;
+  border: 1px solid rgba(124, 92, 252, 0.1);
+  animation: spinRing 38s linear infinite;
+}
+
+.hero__ring--2 {
+  width: 380px;
+  height: 380px;
+  border: 1px dashed rgba(0, 212, 255, 0.07);
+  animation: spinRing 58s linear infinite reverse;
+}
+
+.hero__ring--3 {
+  width: 520px;
+  height: 520px;
+  border: 1px solid rgba(255, 255, 255, 0.025);
+  animation: spinRing 80s linear infinite;
+}
+
+@keyframes spinRing {
+  from { transform: translate(-50%, -50%) rotate(0deg); }
+  to   { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+/* ── CENTER IDENTITY ── */
+.hero__identity {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 10;
+  pointer-events: none;
+  transition: transform 0.08s linear;
+  animation: identityIn 1.1s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@keyframes identityIn {
+  from { opacity: 0; transform: translate(-50%, calc(-50% + 24px)); }
+  to   { opacity: 1; transform: translate(-50%, -50%); }
+}
+
+.hero__eyebrow {
+  font-size: 11px;
+  letter-spacing: 4px;
+  color: var(--accent-cyan);
+  text-transform: uppercase;
+  margin-bottom: 12px;
+  opacity: 0.65;
+  font-weight: 400;
+}
+
+.hero__name {
+  font-family: var(--font-display);
+  font-size: clamp(40px, 5.5vw, 70px);
+  font-weight: 800;
+  color: #fff;
+  letter-spacing: -1.5px;
+  line-height: 1;
+  margin-bottom: 14px;
+}
+
+.hero__name--accent {
+  background: linear-gradient(135deg, var(--accent-purple), var(--accent-cyan));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.hero__tagline {
+  font-size: 14px;
+  color: var(--text-secondary);
+  font-weight: 300;
+  font-style: italic;
+  letter-spacing: 0.5px;
+  margin-bottom: 26px;
+  max-width: 320px;
+  line-height: 1.6;
+}
+
+/* Available badge */
+.hero__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 11px;
+  color: var(--accent-green);
+  border: 1px solid rgba(74, 222, 128, 0.25);
+  border-radius: 50px;
+  padding: 7px 16px;
+  letter-spacing: 0.3px;
+  pointer-events: all;
+  cursor: default;
+}
+
+.hero__badge-dot {
+  width: 6px;
+  height: 6px;
+  background: var(--accent-green);
+  border-radius: 50%;
+  animation: dotPing 1.6s ease-in-out infinite;
+}
+
+@keyframes dotPing {
+  0%, 100% { opacity: 1;   transform: scale(1); }
+  50%       { opacity: 0.4; transform: scale(1.5); }
+}
+
+/* ── SCROLL HINT ── */
+.hero__scroll-hint {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  animation: identityIn 1.5s ease 1.2s both;
+}
+
+.hero__scroll-hint span {
+  font-size: 10px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.hero__scroll-line {
+  width: 1px;
+  height: 38px;
+  background: linear-gradient(to bottom, var(--text-muted), transparent);
+  animation: scrollPulse 2.2s ease-in-out infinite;
+}
+
+@keyframes scrollPulse {
+  0%, 100% { opacity: 0.35; transform: scaleY(1); }
+  50%       { opacity: 0.9;  transform: scaleY(1.1); }
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 600px) {
+  .hero__ring--3 { display: none; }
+  .hero__tagline { font-size: 13px; }
+}
