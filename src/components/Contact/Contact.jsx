@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import emailjs from '@emailjs/browser';
 import './Contact.css';
 
-const SERVICE_ID  = 'service_gxtlm4o';   // 
-const TEMPLATE_ID = 'template_hyhzj4y';  // 
+const SERVICE_ID  = 'service_wg1j46i';   // 
+const TEMPLATE_ID = 'template_o30gufh';  // 
 const PUBLIC_KEY  = '057teho9jy5rRSfRx';   // 
 
 const SOCIALS = [
