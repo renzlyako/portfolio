@@ -29,7 +29,6 @@ const SERVICES = [
   {
     id: 1,
     title: 'Product Manipulation',
-    icon: '🖼️',
     description: 'Creative product compositing and manipulation for stunning visuals.',
     tools: ['Photoshop', 'Lightroom'],
     color: '#31A8FF',
@@ -37,7 +36,6 @@ const SERVICES = [
   {
     id: 2,
     title: 'Photo Enhancement',
-    icon: '✨',
     description: 'Professional color grading and retouching for flawless photos.',
     tools: ['Photoshop', 'Lightroom'],
     color: '#FF9A00',
@@ -45,7 +43,6 @@ const SERVICES = [
   {
     id: 3,
     title: 'Video Editing',
-    icon: '🎬',
     description: 'Dynamic video editing with smooth transitions and motion graphics.',
     tools: ['Premiere Pro'],
     color: '#9999FF',
@@ -53,7 +50,6 @@ const SERVICES = [
   {
     id: 4,
     title: 'AI Visual Prompt Generator',
-    icon: '🤖',
     description: 'Crafting precise AI prompts to generate stunning visual content.',
     tools: ['Gemini', 'Midjourney', 'ChatGPT'],
     color: '#4ade80',
@@ -61,7 +57,6 @@ const SERVICES = [
   {
     id: 5,
     title: 'YouTube Thumbnails',
-    icon: '▶️',
     description: 'Eye-catching thumbnails designed to maximize clicks and views.',
     tools: ['Photoshop'],
     color: '#FF0000',
@@ -69,7 +64,6 @@ const SERVICES = [
   {
     id: 6,
     title: 'UI / UX Design',
-    icon: '◈',
     description: 'Clean, user-centered interface design for web and mobile apps.',
     tools: ['Figma', 'Photoshop'],
     color: '#F24E1E',
@@ -77,7 +71,6 @@ const SERVICES = [
   {
     id: 7,
     title: 'Banners & Flyers',
-    icon: '📐',
     description: 'Bold promotional materials that capture attention and drive action.',
     tools: ['Photoshop'],
     color: '#fbbf24',
@@ -85,7 +78,6 @@ const SERVICES = [
   {
     id: 8,
     title: 'Front-End Development',
-    icon: '💻',
     description: 'Professionally designed front-end interfaces with clean code and smooth interactions.',
     tools: ['HTML5', 'CSS3', 'JavaScript', 'React'],
     color: '#00d4ff',

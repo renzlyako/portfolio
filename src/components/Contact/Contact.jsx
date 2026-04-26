@@ -113,7 +113,7 @@ export default function Contact() {
             </div>
 
             <h2 className="contact__heading">
-              Say <span>Hello</span> 👋
+              Say <span>Hello!</span> 
             </h2>
 
             <p className="contact__desc">

@@ -41,7 +41,7 @@ export default function Hero() {
 
         {/* Name */}
         <h1 className="hero__name">
-          I'm <span className="hero__name--accent">Renzly</span>
+          I'm <span className="hero__name--accent">RenZ</span>
         </h1>
 
         {/* Tagline */}
