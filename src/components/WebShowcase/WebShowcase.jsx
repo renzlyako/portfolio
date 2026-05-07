@@ -4,6 +4,8 @@ import webdesign1 from '../../assets/webdesign1.png';
 import p1 from '../../assets/P1.jpg';
 import webdesign2 from '../../assets/webdesign2.png';
 import p2 from '../../assets/P2.png';
+import webdesign3 from '../../assets/webdesign3.png';
+import p3 from '../../assets/P3.png';
 
 const WEBSITES = [
   {
@@ -28,13 +30,14 @@ const WEBSITES = [
   },
   {
     id: 3,
-    name: 'Coming Soon',
-    description: 'Next project in progress...',
-    image: null,
-    preview: null,
-    url: null,
-    tags: [],
+    name: 'LensLux',
+    description: 'A modern eyewear e-commerce store with a clean and stylish shopping experience.',
+    image: webdesign3,
+    preview: p3,
+    url: 'https://lens-lux-chi.vercel.app/',
+    tags: ['UI/UX', 'Web Design'],
     color: '#00d4ff',
+    imagePosition: 'center 50%',
   },
 ];
 
@@ -86,6 +89,7 @@ export default function WebShowcase() {
                     src={site.image}
                     alt={site.name}
                     className="ws-card__img ws-card__img--thumb"
+                    style={{ objectPosition: site.imagePosition || 'top' }}
                   />
                   {site.preview && (
                     <div className="ws-card__scroll-preview">
